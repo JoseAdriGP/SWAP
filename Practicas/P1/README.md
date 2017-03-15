@@ -10,7 +10,7 @@
 
 | Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](./Images/P1-4.png) | ![Imagen](./Images/P1-5.png) | ![Imagen](./Images/P1-6.png)
+| ![Imagen](./P1/Images/P1-4.png) | ![Imagen](./Images/P1-5.png) | ![Imagen](./Images/P1-6.png)
 
 > Si es la primera vez que utilizas VMware player en tu equipo, es probable que te pida que instales una serie de herramientas para el sistema operativo que este instalando. De ser el caso, recomiendo aceptar esta instalación, ya que no afecta a la otra instalación, simplemente al terminar solicitará reiniciar el sistema donde tengamos instalado VMware. 
 
