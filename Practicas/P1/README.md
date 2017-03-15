@@ -6,7 +6,7 @@
 
 | Presionamos en "Create a New Virtual Machine" | Indicar el archivo ISO de la distribución | Rellenar datos de usuario |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](./Practicas/P1/Images/P1-1.PNG) | ![Imagen](/Images/P1-2.png) | ![Imagen](Images/P1-3.png)
+| ![Imagen](Images/P1-1.PNG) | ![Imagen](Images/P1-2.png) | ![Imagen](Images/P1-3.png)
 
 | Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
 | :-------------: | :-------------: | :-------------: |
@@ -33,19 +33,19 @@ Las opciones anteriores son realmente las primeras, luego pide más configuracio
 
 ## Instalación de apache
 
-> Como podemos ver, la orden "sudo apt-get install apache2 mysql-server php5 libapache2-mod-php5 php5-mysql" no pudo ejecutarse por problemas al faltar repositorios, pero el fallo persiste después de utilizar "sudo apt-get update" y "sudo apt-get update". 
->![Imagen](./Images/P1-14.png)
->> La solución fue instalar utilizando la siguiente orden. 
+Como podemos ver, la orden "sudo apt-get install apache2 mysql-server php5 libapache2-mod-php5 php5-mysql" no pudo ejecutarse por problemas al faltar repositorios, pero el fallo persiste después de utilizar "sudo apt-get update" y "sudo apt-get update". 
+![Imagen](./Images/P1-14.png)
+> La solución fue instalar utilizando la siguiente orden. 
 ![Imagen](./Images/P1-15.png)
 
-> Como podemos ver en la siguiente captura de pantalla, la versión que utilizo es "Apache/2.4.18 (Ubuntu)" y apache está funcionando correctamente.
+ Como podemos ver en la siguiente captura de pantalla, la versión que utilizo es "Apache/2.4.18 (Ubuntu)" y apache está funcionando correctamente.
 ![Imagen](./Images/P1-16.png)
 
 ## Instalación de ssh
 
->Puesto que no que la instalación no se ha producido de forma automática, habrá que asegurarsse de la instalación de ssh. Para ello, la orden que debemos realizar es "sudo apt-get install "sudo apt-get install openssh-server"
+Puesto que no que la instalación no se ha producido de forma automática, habrá que asegurarsse de la instalación de ssh. Para ello, la orden que debemos realizar es "sudo apt-get install "sudo apt-get install openssh-server"
 
-Cuano se ha hecho la instalación, estas son algunas de las ordenes que pueden resultar útiles:
+Cuando se ha hecho la instalación, estas son algunas de las ordenes que pueden resultar útiles:
 - **Editar la configuración del servidor SSH:** "sudo gedit /etc/ssh/sshd_config"
 - **Arrancar el servidor:** "sudo /etc/init.d/ssh start"
 - **Parar el servidor:** "sudo /etc/init.d/ssh stop"
