@@ -10,7 +10,7 @@
 
 | Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-4.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-5.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-6.png)
+| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-4.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-5.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-6.PNG)
 
 > Si es la primera vez que utilizas VMware player en tu equipo, es probable que te pida que instales una serie de herramientas para el sistema operativo que este instalando. De ser el caso, recomiendo aceptar esta instalación, ya que no afecta a la otra instalación, simplemente al terminar solicitará reiniciar el sistema donde tengamos instalado VMware. 
 
@@ -20,14 +20,14 @@ Como ya hemos comentado anteriormente, la instalación que realiza es automátic
 
 | Proceso de instalación | Iniciar sesión | Logueo correcto y orden para cambiar configuración de teclado |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-7.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-8.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-9.png)
+| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-7.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-8.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-9.PNG)
 
 
 ## Configuración de teclado
 
 | Selección de "Generic 104-key PC" | Selección Spanish | Selección de uso de Winkeys |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-11.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-12.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-13.png)
+| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-11.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-12.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-13.PNG)
 
 Las opciones anteriores son realmente las primeras, luego pide más configuraciones. Teniendo en cuenta que esto variará en función del teclado que tengamos, me ha parecido un error ponerlas. 
 
