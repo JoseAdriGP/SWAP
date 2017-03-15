@@ -6,11 +6,11 @@
 
 | Presionamos en "Create a New Virtual Machine" | Indicar el archivo ISO de la distribución | Rellenar datos de usuario |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](Images/P1-1.png) | ![Imagen](./Practicas/P1/Images/P1-2.png) | ![Imagen](Images/P1-3.png)
+| ![Imagen](Images/P1-1.png) | ![Imagen](Images/P1-2.png) | ![Imagen](Images/P1-3.png)
 
 | Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](./P1/Images/P1-4.png) | ![Imagen](./Images/P1-5.png) | ![Imagen](./Images/P1-6.png)
+| ![Imagen](Images/P1-4.png) | ![Imagen](./Images/P1-5.png) | ![Imagen](./Images/P1-6.png)
 
 > Si es la primera vez que utilizas VMware player en tu equipo, es probable que te pida que instales una serie de herramientas para el sistema operativo que este instalando. De ser el caso, recomiendo aceptar esta instalación, ya que no afecta a la otra instalación, simplemente al terminar solicitará reiniciar el sistema donde tengamos instalado VMware. 
 
