@@ -16,7 +16,7 @@
 
 ## Instalación de ubuntu
 
-> Como ya hemos comentado anteriormente, la instalación que realiza es automática sin posibilidad de customizar. Esto provoca que el teclado se instale en inglés 
+Como ya hemos comentado anteriormente, la instalación que realiza es automática sin posibilidad de customizar. Esto provoca que el teclado se instale en inglés 
 
 | Proceso de instalación | Iniciar sesión | Logueo correcto y orden para cambiar configuración de teclado |
 | :-------------: | :-------------: | :-------------: |
@@ -34,11 +34,13 @@ Las opciones anteriores son realmente las primeras, luego pide más configuracio
 ## Instalación de apache
 
 Como podemos ver, la orden "sudo apt-get install apache2 mysql-server php5 libapache2-mod-php5 php5-mysql" no pudo ejecutarse por problemas al faltar repositorios, pero el fallo persiste después de utilizar "sudo apt-get update" y "sudo apt-get update". 
+
 ![Imagen](./Images/P1-14.png)
 > La solución fue instalar utilizando la siguiente orden. 
 ![Imagen](./Images/P1-15.png)
 
  Como podemos ver en la siguiente captura de pantalla, la versión que utilizo es "Apache/2.4.18 (Ubuntu)" y apache está funcionando correctamente.
+ 
 ![Imagen](./Images/P1-16.png)
 
 ## Instalación de ssh
