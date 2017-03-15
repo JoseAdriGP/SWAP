@@ -35,13 +35,13 @@ Las opciones anteriores son realmente las primeras, luego pide más configuracio
 
 Como podemos ver, la orden "sudo apt-get install apache2 mysql-server php5 libapache2-mod-php5 php5-mysql" no pudo ejecutarse por problemas al faltar repositorios, pero el fallo persiste después de utilizar "sudo apt-get update" y "sudo apt-get update". 
 
-![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-14.png)
+![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-14.PNG)
 > La solución fue instalar utilizando la siguiente orden. 
-![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-15.png)
+![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-15.PNG)
 
  Como podemos ver en la siguiente captura de pantalla, la versión que utilizo es "Apache/2.4.18 (Ubuntu)" y apache está funcionando correctamente.
  
-![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-16.png)
+![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-16.PNG)
 
 ## Instalación de ssh
 
