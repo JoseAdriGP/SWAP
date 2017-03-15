@@ -6,11 +6,7 @@
 
 | Presionamos en "Create a New Virtual Machine" | Indicar el archivo ISO de la distribución | Rellenar datos de usuario |
 | :-------------: | :-------------: | :-------------: |
-<<<<<<< HEAD
 | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-1.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-2.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-3.png)
-=======
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-1.PNG) | ![Imagen](Images/P1-2.png) | ![Imagen](Images/P1-3.png)
->>>>>>> origin/master
 
 | Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
 | :-------------: | :-------------: | :-------------: |
@@ -31,7 +27,7 @@ Como ya hemos comentado anteriormente, la instalación que realiza es automátic
 
 | Selección de "Generic 104-key PC" | Selección Spanish | Selección de uso de Winkeys |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-11.png) | ![Imagen](./Images/P1-12.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-13.png)
+| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-11.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-12.png) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/P1-13.png)
 
 Las opciones anteriores son realmente las primeras, luego pide más configuraciones. Teniendo en cuenta que esto variará en función del teclado que tengamos, me ha parecido un error ponerlas. 
 
