@@ -6,7 +6,7 @@
 
 | Presionamos en "Create a New Virtual Machine" | Indicar el archivo ISO de la distribución | Rellenar datos de usuario |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](./Images/P1-1.PNG) | ![Imagen](./Practicas/P1/Images/P1-2.png) | ![Imagen](./Practicas/P1/Images/P1-3.png)
+| ![Imagen](./Practicas/P1/Images/P1-1.PNG) | ![Imagen](./Practicas/P1/Images/P1-2.png) | ![Imagen](./Practicas/P1/Images/P1-3.png)
 
 | Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
 | :-------------: | :-------------: | :-------------: |
