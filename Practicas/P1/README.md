@@ -52,3 +52,6 @@ Cuando se ha hecho la instalación, estas son algunas de las ordenes que pueden 
 - **Arrancar el servidor:** "sudo /etc/init.d/ssh start"
 - **Parar el servidor:** "sudo /etc/init.d/ssh stop"
 - **Reiniciar el servidor:** "sudo /etc/init.d/ssh restart"
+
+
+* [Volver](./README.md)
