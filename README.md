@@ -9,3 +9,5 @@
 * [Práctica 5: Replicación de bases de datos de MySQL](Practicas/P5/README.md)
 
 ### Ejercicios
+
+* [Ejercicios Tema 1](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.txt)
