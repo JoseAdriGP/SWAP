@@ -31,7 +31,10 @@ Una vez hecho esto, ejecutamos `rsync` pasándole como argumentos **-avz -e**:
 + z: se usa para usar compresión 
 + e: se usa para indicar que vamos realizar la copia en otro ordenador 
 
-En el caso que presento, se utilizará ssh), y ssh root@192.168.78.132:/var/www /var/ (conectarse mediante ssh a la máquina indicada y usando el usuario root, copiar la carpeta “/var/www/” y todo su contenido en la carpeta remota “/var/”). Introducido esto, nos pedirá la contraseña del usuario “root” y nos mostrará por pantalla las acciones realizadas. Finalmente comprobamos que los archivos copiados son exactos a los originales.
+En el caso que presento, se utilizará `ssh` y `ssh root@192.168.75.129:/var/spool /var/inventada` que se utiliza para conectarse mediante ssh a la máquina indicada. 
+Usando el usuario root, copiará la carpeta “/var/spool/” y todo su contenido en la carpeta remota “/var/”.
+
+Introducido esto, pedirá la contraseña de **root** y nos mostrará por pantalla las acciones realizadas. Finalmente comprobamos que los archivos copiados son exactos a los originales.
 
 
 
