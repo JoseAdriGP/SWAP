@@ -9,7 +9,9 @@ Me ocurrió que al instalar la segunda máquina virtual (en VMware Player no pue
     in the drive '/media/cdrom/' and press enter
 
 Para solucionar esto, debemos quitar cdrom del archivo source.list mediante:
+    
     sudo sed -i '/cdrom/d' /etc/apt/sources.list
+
 Cuando hayamos hecho esto, utilizaremos "sudo apt-get update" y "sudo apt-get upgrade" y podremos trabajar con normalidad. 
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T4.md) 
