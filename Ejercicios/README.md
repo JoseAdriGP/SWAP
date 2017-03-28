@@ -1,57 +1,88 @@
 # Práctica 1: Preparación de herramientas
+Apache:
+	Es un servidor web HTTP de código abierto para plataformas Unix, Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.12 y la noción de sitio virtual.
+	Entre sus ventajas encontramosque es modular, de código abierto, multi-plataforma, extensible y bastante popular, por lo que es fácil conseguir ayuda o soporte.
+	Se usa principalmente para enviar páginas web estáticas y dinámicas en la Web. 
+	Muchas aplicaciones web están diseñadas asumiendo como ambiente de implantación a Apache, o que utilizarán características propias de este servidor web.
+	La mayor parte de la configuración se realiza en el fichero apache2.conf en Ubuntu o httpd.conf en otros. Cualquier cambio en este archivo requiere reiniciar el servidor o forzar la lectura de los archivos de configuración nuevamente.
+	Los programadores de aplicaciones web a veces utilizan una versión local de Apache con el fin de previsualizar y probar código mientras éste es desarrollado.
 
-> La maquina qu virtual que voy a utilizar para esta práctica es VMware Player 12, por lo que al tener una instalación automática, tendremos que hacer una serie de pasos extra para tener completamente configurada la herramienta.
+Nginx:
+	Es un servidor web/proxy inverso ligero de alto rendimiento y un proxy para protocolos de correo electrónico.
+	Es software libre y de código abierto, licenciado bajo la Licencia BSD simplificada, aunque también existe una versión comercial distribuida bajo el nombre de nginx plus.
+	Es multiplataforma, por lo que corre en sistemas tipo Unix y Windows.
+	Originalmente fue desarrollado para satisfacer las necesidades de varios sitios web de Rambler que recibían unas 500 millones de peticiones al día en septiembre de 2008.
 
-## Instalación de Ubuntu Server 16.04.2
+	Las características básicas del servidor web son:
+		· Servidor de archivos estáticos, índices y autoindexado.
+		· Proxy inverso con opciones de caché.
+		· Balanceo de carga.
+		· Tolerancia a fallos.
+		· Soporte de HTTP y HTTP2 sobre SSL.
+		· Soporte para FastCGI con opciones de caché.
+		· Servidores virtuales basados en nombre y/o en dirección IP.
+		· Streaming de archivos FLV y MP4.
+		· Soporte para autenticación.
+		· Compatible con IPv6
+		· Soporte para protocolo SPDY
+		· Compresión gzip.
+		· Habilitado para soportar más de 10.000 conexiones simultáneas
 
-| Presionamos en "Create a New Virtual Machine" | Indicar el archivo ISO de la distribución | Rellenar datos de usuario |
-| :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-1.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-2.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-3.PNG)
+	Las características del proxy de correo son:
+		· Proxy SMTP, POP3 e IMAP.
+		· Soporta STARTTLS.
+		· Soporta SSL.	
 
-| Rellenar datos para la máquina virtual | Indicar el espacio que queremos para la máquina y el método de almacenamiento | Finalizar la configuración inicial |
-| :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-4.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-5.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-6.PNG)
+thttpd:
+	Es un servidor web de código libre disponible para la mayoría de las variantes de Unix que se caracteriza por ser simple, pequeño, portátil, rápido y seguro, ya que utiliza los requerimientos mínimos de un servidor HTTP. 
+	Esto lo hace ideal para servir grandes volúmenes de información estática.
+	
+	Características más relevantes:
+		· Simple: maneja solo el mínimo necesario para poner en práctica el protocolo HTTP (algunas veces un poco más que el mínimo).
+		· Pequeño: tiene un pequeño tamaño de período de explotación, ya que no se divide en dos partes y es muy cuidadoso sobre la asignación de memoria.
+		· Portátil: se compila limpiamente sobre la mayoría de sistemas operativos.
+		· Rápido: en el empleo típico es sobre todo más rápido que los mejores servidores "destacados" (Apache), y bajo la carga extrema es mucho más rápido.
+		· Seguro: se extiende a grandes longitudes para proteger el servidor Web contra ataques de otros sitios.
+	
+	Usos para thttpd:
+		El uso apropiado de esta herramienta es obtener velocidad en la transferencia de archivos y reducción de gastos innecesarios para funciones que no son requeridas en el servidor, debido a tener solo la posibilidad de utilizar servidores estándar (Apache).
+		Este rasgo importante permite al administrador de servidor limitar la tasa de bit máxima para ciertos tipos de archivos transferidos, generando, una aplicación mucho más ligera y rápida.
 
-> Si es la primera vez que utilizas VMware player en tu equipo, es probable que te pida que instales una serie de herramientas para el sistema operativo que este instalando. De ser el caso, recomiendo aceptar esta instalación, ya que no afecta a la otra instalación, simplemente al terminar solicitará reiniciar el sistema donde tengamos instalado VMware. 
+	Ventajas:
+		El administrador puede decidir restringir la transferencia de archivos de imagen JPEG a 20 kilobytes por segundo. Esto evita la saturación la conexión, de modo que el servidor pueda seguir siendo accesible bajo una carga de trabajo pesada, con la desventaja de que se reduce la velocidad de transferencia de los archivos. Los promedios de carga caen debido a la reducción de la transferencia gráfica gracias a thttpd.
 
-## Instalación de ubuntu
+	Inconvenientes:
+		No posee las mismas aplicaciones que se pueden obtener de un software estándar como lo es el Apache.
 
-Como ya hemos comentado anteriormente, la instalación que realiza es automática sin posibilidad de customizar. Esto provoca que el teclado se instale en inglés 
+Node.js
+	Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google.
+	Fue creado con el enfoque de ser útil en la creación de programas de red altamente escalables, como servidores web.
+	
+	Aspectos técnicos:
+		· Concurrencia: funciona con un modelo de evaluación de un único hilo de ejecución, usando entradas y salidas asíncronas las cuales pueden ejecutarse concurrentemente en un número de hasta cientos de miles sin incurrir en costos asociados al cambio de contexto. 
+				Este diseño de compartir un único hilo de ejecución entre todas las solicitudes atiende a necesidades de aplicaciones altamente concurrentes, en el que toda operación que realice entradas y salidas debe tener una función callback. Un inconveniente de este enfoque de único hilo de ejecución es que Node.js requiere de módulos adicionales como cluster7 para escalar la aplicación con el número de núcleos de procesamiento de la máquina en la que se ejecuta.
+		
+		· V8: 	es el entorno de ejecución para JavaScript creado para Google Chrome. 
+			Es software libre desde 2008, está escrito en C++ y compila el código fuente JavaScript en código de máquina en lugar de interpretarlo en tiempo real.
+			Contiene libuv para manejar eventos asíncronos. Libuv es una capa de abstracción de funcionalidades de redes y sistemas de archivo en sistemas Windows y sistemas basados en POSIX como Linux, Mac OS X y Unix.
+			El cuerpo de operaciones de base de Node.js está escrito en JavaScript con métodos de soporte escritos en C++.
+		
+		· Módulos: 	incorpora varios "módulos básicos" compilados en el propio binario. 
+				Es posible utilizar módulos desarrollados por terceros, ya sea como archivos ".node" precompilados, o como archivos en javascript plano. Los módulos Javascript se implementan siguiendo la especificación CommonJS para módulos, utilizando una variable de exportación para dar a estos scripts acceso a funciones y variables implementadas por los módulos.
+				Los módulos de terceros pueden extender node.js o añadir un nivel de abstracción, implementando varias utilidades middleware para utilizar en aplicaciones web. 
+				Pese a que los módulos pueden instalarse como archivos simples, normalmente se instalan utilizando el Node Package Manager (npm) que nos facilitará la compilación, instalación y actualización de módulos así como la gestión de las dependencias. 
+				Los módulos que no se instalen el directorio por defecto de módulos de Node necesitarán la utilización de una ruta relativa para poder encontrarlos.
+				El wiki Node.js proporciona una lista de varios de los módulos de terceros disponibles.
+		
+		· Desarrollo homogéneo entre cliente y servidor: 	puede ser combinado con una base de datos documental y JSON, lo que permite desarrollar en un entorno de desarrollo JavaScript unificado. 
+									Con la adaptación de los patrones para desarrollo del lado del servidor tales como MVC y sus variantes MVP, MVVM, etc. 
+									Facilita la reutilización de código del mismo modelo de interfaz entre el lado del cliente y el lado del servidor.
+		
+		· Lazo de eventos:	Se registra con el sistema operativo y cada vez que un cliente establece una conexión se ejecuta un callback. 
+					Dentro del entorno de ejecución de Node.js, cada conexión recibe una pequeña asignación de espacio de memoria dinámico, sin tener que generar un hilo de trabajo. 
+					A diferencia de otros servidores dirigidos por eventos, el lazo de manejo de eventos de Node.js no es llamado explícitamente sino que se activa al final de cada ejecución de una función de callback. 
+					El lazo de manejo de eventos se termina cuando ya no quedan eventos por atender.
 
-| Proceso de instalación | Iniciar sesión | Logueo correcto y orden para cambiar configuración de teclado |
-| :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-7.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-8.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-9.PNG)
-
-
-## Configuración de teclado
-
-| Selección de "Generic 104-key PC" | Selección Spanish | Selección de uso de Winkeys |
-| :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-11.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-12.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-13.PNG)
-
-Las opciones anteriores son realmente las primeras, luego pide más configuraciones. Teniendo en cuenta que esto variará en función del teclado que tengamos, me ha parecido un error ponerlas. 
-
-## Instalación de apache
-
-Como podemos ver, la orden "sudo apt-get install apache2 mysql-server php5 libapache2-mod-php5 php5-mysql" no pudo ejecutarse por problemas al faltar repositorios, pero el fallo persiste después de utilizar "sudo apt-get update" y "sudo apt-get update". 
-
-![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-14.PNG)
-> La solución fue instalar utilizando la siguiente orden. 
-![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-15.PNG)
-
- Como podemos ver en la siguiente captura de pantalla, la versión que utilizo es "Apache/2.4.18 (Ubuntu)" y apache está funcionando correctamente.
- 
-![Imagen](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/Practicas/P1/Images/p1-16.PNG)
-
-## Instalación de ssh
-
-Puesto que no que la instalación no se ha producido de forma automática, habrá que asegurarsse de la instalación de ssh. Para ello, la orden que debemos realizar es "sudo apt-get install openssh-server".
-
-Cuando se ha hecho la instalación, estas son algunas de las ordenes que pueden resultar útiles:
-- **Editar la configuración del servidor SSH:** "sudo gedit /etc/ssh/sshd_config"
-- **Arrancar el servidor:** "sudo /etc/init.d/ssh start"
-- **Parar el servidor:** "sudo /etc/init.d/ssh stop"
-- **Reiniciar el servidor:** "sudo /etc/init.d/ssh restart"
-
-
-[Volver](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/README.md)
+	Comunidad:	
+		Existe una comunidad muy activa de desarrolladores de Node.js que se comunican a través de grupos de discusión, nodejs y nodejs-dev y el canal IRC #node.js en freenode. 
+		La comunidad se reúne en NodeConf, una convención de desarrolladores centrada en Node.js.
