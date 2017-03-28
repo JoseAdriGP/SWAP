@@ -10,4 +10,4 @@
 
 ### Ejercicios
 
-* [Ejercicios Tema 1](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.txt)
+* [Ejercicios Tema 1](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
