@@ -15,4 +15,4 @@
 * [Tema 3: La red de una granja web](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T3.md)
 * [Tema 4: Balanceo de carga](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T4.md)
 
-### [Probemas encontrados]Practicas/README.md
+### [Probemas encontrados](Practicas/README.md)
