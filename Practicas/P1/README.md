@@ -54,4 +54,4 @@ Cuando se ha hecho la instalación, estas son algunas de las ordenes que pueden 
 - **Reiniciar el servidor:** "sudo /etc/init.d/ssh restart"
 
 
-[Volver](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md)
+[Volver](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/README.md)
