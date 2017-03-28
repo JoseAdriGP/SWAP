@@ -1,4 +1,4 @@
-# Práctica 1: Preparación de herramientas
+# Ejercicios tema 1
 Apache:
 	Es un servidor web HTTP de código abierto para plataformas Unix, Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.12 y la noción de sitio virtual.
 	Entre sus ventajas encontramosque es modular, de código abierto, multi-plataforma, extensible y bastante popular, por lo que es fácil conseguir ayuda o soporte.
