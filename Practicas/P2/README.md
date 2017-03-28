@@ -3,4 +3,4 @@
 ##TRABAJANDO EN ELLO
 
 
-[Volver](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](Practicas/P2/README.md) [Siguiente](Practicas/P3/README.md)
+[Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P1/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/README.md)
