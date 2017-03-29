@@ -66,7 +66,7 @@ Para automatizar la copia con `rsync` mediante `cron`, se puede crear un script 
 
 Para finalizar faltaría es añadir una nueva tarea al **“crontab”** (fichero de configuración de `cron` en **“/etc/crontab”**), para que cada hora se realice la copia de seguridad en nuestra máquina replicante, así que en este caso deberemos añadir: `0 *      * * *  root    /root/scriptUpdate.sh`.
 
-Aquí se indica que en el minuto **“0”** de cada hora, de cada día del mes, de cada mes, de cada día de la semana, el usuario **“root”** ejecute el script **“/root/scriptActualizar.sh”**, que es el script que acabamos de crear para que realice la copia del contenido actualizado del directorio **“/var/inventado/”** de la máquina principal a la máquina replicante.
+Aquí se indica que en el minuto **“0”** de cada hora, de cada día del mes, de cada mes, de cada día de la semana, el usuario **“root”** ejecute el script **“/root/scriptUpdate.sh”**, que es el script que acabamos de crear para que realice la copia del contenido actualizado del directorio **“/var/inventado/”** de la máquina principal a la máquina replicante.
 
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P1/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/README.md)
