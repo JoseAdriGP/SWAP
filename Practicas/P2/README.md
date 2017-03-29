@@ -57,7 +57,7 @@ Se va a volver a realizar la copia del directorio **“/var/inventado/”** con 
 + `--delete`: los archivos que hayan sido eliminados en la máquina origen, también serán eliminados en la máquina de copias en caso de existir
 + `--exclude`: para que no se copien los archivos indicados
 
-> Un ejemplo de uso sería `rsync -avz --delete --exclude =**/error --exclude =**/pictures/readme.txt -e "ssh -l root" root@192.168.75.129 /var/inventado /var/ `
+> Un ejemplo de uso sería `rsync -avz --delete --exclude =**/error --exclude =**/pictures/readme.txt -e "ssh -l root" root@192.168.75.129:/var/inventado/ /var/inventado/`
 
 En `ssh` también se debe indicar que la conexión se realizará como **“root”** mediante: -e `ssh –l root`. 
 Si se realiza correctamente la creación y copiado de las claves, la ejecución de `rsync` no pedirá contraseña.
