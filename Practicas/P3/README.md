@@ -1,6 +1,6 @@
 # Práctica 3: Balanceo de carga
 
-> ## Debido a un problema con el PC en el que estoy trabajndo, las capturas de pantalla serán subidas más adelante
+> ## Debido a un problema con el PC en el que estoy trabajando, las capturas de pantalla serán subidas más adelante, por lo que voy a hacer anotaciones con las ordenes que deben usarse
 
 
 ## Objetivos
@@ -14,6 +14,8 @@ Vamos a comprobar que tenemos nuestros dos servidores funcionando y conectados a
 | Server 1 | Server 2 | 
 | :-------------: | :-------------: |
 | ![Imagen]() | ![Imagen]() |
+> Comprobar el funcionamiento de apache: /etc/init.d/apache2 status
+> Datos del servidor: ifconfig
 
 ## Instalar NginX
 > Para instalar NginX se necesita importar la clave del repositorio de software.
