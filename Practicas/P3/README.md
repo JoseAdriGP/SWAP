@@ -13,7 +13,7 @@ Vamos a comprobar que tenemos nuestros dos servidores funcionando y conectados a
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) |
 
 ## Instalar NginX
-Para instalar NginX, lo primero que necesitamos es importar la clave del repositorio de software:
+> Para instalar NginX se necesita importar la clave del repositorio de software.
 
 | Importar clave del repositorio | Añadir repositorio a **“/etc/apt/sources.list”** | Instalación | 
 | :-------------: | :-------------: |  :-------------: |
