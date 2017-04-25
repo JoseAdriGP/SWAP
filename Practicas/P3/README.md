@@ -14,8 +14,7 @@ Vamos a comprobar que tenemos nuestros dos servidores funcionando y conectados a
 | Server 1 | Server 2 | 
 | :-------------: | :-------------: |
 | ![Imagen]() | ![Imagen]() |
-> - Comprobar el funcionamiento de apache: /etc/init.d/apache2 status
-- Datos del servidor: ifconfig
+> - Comprobar el funcionamiento de apache: /etc/init.d/apache2 status - Datos del servidor: ifconfig
 
 ## Instalar NginX
 > Para instalar NginX se necesita importar la clave del repositorio de software.
