@@ -1,5 +1,8 @@
 # Práctica 3: Balanceo de carga
 
+> ## Debido a un problema con el PC en el que estoy trabajndo, las capturas de pantalla serán subidas más adelante
+
+
 ## Objetivos
 En esta práctica configuraremos una red entre varias máquinas de forma que tengamos un balanceador que reparta la carga entre varios servidores finales.
 El problema a solucionar es la sobrecarga de los servidores. Se puede balancear cualquier protocolo, pero dado que esta asignatura se centra en las tecnologías web, balancearemos los servidores HTTP que tenemos configurados.
@@ -10,14 +13,14 @@ Vamos a comprobar que tenemos nuestros dos servidores funcionando y conectados a
 
 | Server 1 | Server 2 | 
 | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) |
+| ![Imagen]() | ![Imagen]() |
 
 ## Instalar NginX
 > Para instalar NginX se necesita importar la clave del repositorio de software.
 
 | Importar clave del repositorio | Añadir repositorio a **“/etc/apt/sources.list”** | Instalación | 
 | :-------------: | :-------------: |  :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) |
+| ![Imagen]() | ![Imagen]() | ![Imagen]() |
 
 La configuración de NginX se realiza en el archivo **“/etc/nginx/conf.d/default.conf”**. La configuración realizada nos permitirá redirigir el tráfico a un grupo de servidores que hemos llamado `apaches` (usando la directiva `upstream`), en dicho grupo de servidores hemos configurado que el primer servidor (`server 192.168.78.132 weight=2`) reciba el doble de carga que el servidor segundo (`server 192.168.78.133 weight=1`), el algoritmo para repartir la carga no es necesario que lo indiquemos porque se toma **“round robin”** por defecto al usar la directiva `upstream`. Dentro de la directiva `location`, deberemos indicar con la directiva `proxy_pass` hacia donde vamos a redirigir el tráfico entrante, en nuestro caso la dirección de acceso a nuestro grupo de servidores ([http://apaches](http://apaches)). Por último, debemos indicar que en los backends la versión de HTTP es 1.1 (`proxy_http_version 1.1`), y que se elimine la cabecera `Connection` (`proxy_set_header Connextion “”`).
 
