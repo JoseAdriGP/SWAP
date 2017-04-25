@@ -37,7 +37,7 @@ La configuración de NginX se realiza en el archivo **“/etc/nginx/conf.d/defau
 
 | Configuración |
 | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/Images/Comprobaci%C3%B3nIPs.PNG) |
+| ![Imagen]() |
 
 Una vez completada la configuración, se comprobará que las peticiones al servidor están sindiendo balanceadas según el criterio indicado. Mediante el navegador `curl` se accede al balanceador mediante su dirección IP.
 
