@@ -31,8 +31,8 @@ Una vez hecho esto, ejecutamos `rsync` pasándole como argumentos **-avz -e**:
 + z: se usa para usar compresión 
 + e: se usa para indicar que vamos realizar la copia en otro ordenador 
 
-En el caso que presento, se utilizará `ssh` y `ssh root@192.168.75.129:/var/inventada /var/` que se utiliza para conectarse mediante ssh a la máquina indicada. 
-Usando el usuario root, copiará la carpeta “/var/inventada” y todo su contenido en la carpeta remota “/var/”.
+En el caso que presento, se utilizará `ssh` y `ssh root@192.168.75.129:/var/www /var/` que se utiliza para conectarse mediante ssh a la máquina indicada. 
+Usando el usuario root, copiará la carpeta “/var/www” y todo su contenido en la carpeta remota “/var/”.
 
 Introducido esto, pedirá la contraseña de **root** y nos mostrará por pantalla las acciones realizadas. Finalmente comprobamos que los archivos copiados son exactos a los originales.
 
@@ -57,7 +57,7 @@ Se va a volver a realizar la copia del directorio **“/var/inventado/”** con 
 + `--delete`: los archivos que hayan sido eliminados en la máquina origen, también serán eliminados en la máquina de copias en caso de existir
 + `--exclude`: para que no se copien los archivos indicados
 
-> Un ejemplo de uso sería `rsync -avz --delete --exclude =**/error --exclude =**/pictures/readme.txt -e "ssh -l root" root@192.168.75.129:/var/inventado/ /var/inventado/`
+> Un ejemplo de uso sería `rsync -avz --delete --exclude =**/error --exclude =**/files/pictures -e "ssh -l root" root@192.168.75.129:/var/www /var/`
 
 En `ssh` también se debe indicar que la conexión se realizará como **“root”** mediante: -e `ssh –l root`. 
 Si se realiza correctamente la creación y copiado de las claves, la ejecución de `rsync` no pedirá contraseña.
