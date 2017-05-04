@@ -45,10 +45,6 @@ Una vez completada la configuración, deberemos ir al archivo `/etc/nginx/nginx.
 
 Ahora se comprobará que las peticiones al servidor están sindiendo balanceadas según el criterio indicado. Mediante el navegador `curl` se accede al balanceador mediante su dirección IP.
 
-| Comprobar IP | Uso de la orden `curl` para comprobar funcionamiento| 
-| :-------------: | :-------------: |
-| ![Imagen]() | ![Imagen]() |
-
 #### Anotaciones 
 - El uso de curl en mi caso es: curl http://192.168.78.130
 - Al pasarlo al portatil dejó de funcionar y no se cuál es el problema
@@ -59,14 +55,8 @@ Para realizar su configuración habrá que modificar en el archivo **“/etc/hap
 
 | Archivo de configuración |
 | :-------------: |
-| ![Imagen]() |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-07.PNG) |
 
-## Último paso
 Ahora se pasa a comprobar la dirección IP de la máquina para así poder realizar la misma prueba que se realizaba con NginX. Una vez conocida la IP, se deberá lanzar el servicio con el comando `/usr/sbin/haproxy –f /etc/haproxy/haproxy.cfg`, de forma que ya se podrá comprobar el funcionamiento con `curl`.
-
-| Comprobar IPs | Comprobar funcionamiento | 
-| :-------------: | :-------------: |
-| ![Imagen]() | ![Imagen]() |
-
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P2/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md)
