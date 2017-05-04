@@ -1,8 +1,5 @@
 # Práctica 3: Balanceo de carga
 
-> ## Debido a un problema con el PC en el que estoy trabajando, las capturas de pantalla serán subidas más adelante, por lo que voy a hacer anotaciones con las ordenes que deben usarse
-
-
 ## Objetivos
 En esta práctica configuraremos una red entre varias máquinas de forma que tengamos un balanceador que reparta la carga entre varios servidores finales.
 El problema a solucionar es la sobrecarga de los servidores. Se puede balancear cualquier protocolo, pero dado que esta asignatura se centra en las tecnologías web, balancearemos los servidores HTTP que tenemos configurados.
@@ -11,20 +8,21 @@ De esta forma conseguiremos una infraestructura redundante y de alta disponibili
 ## Primeros pasos
 Vamos a comprobar que tenemos nuestros dos servidores funcionando y conectados a la misma red, asi que hay que comprobar que Apache está arrancado, obtener la dirección IP de ambos servidores, y ver que sean visibles entre sí.
 
-| Server 1 | 
+| Server | 
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-01.PNG) |
 
 #### Anotaciones 
 - Comprobar el funcionamiento de apache: /etc/init.d/apache2 status
 - Datos del servidor: ifconfig
+- La ip de m1 cambia a 192.168.75.131 más adelante al sufrir un pequeño contratiempo y tener que crear otro m1
 
 ## Instalar NginX
 > Para instalar NginX se necesita importar la clave del repositorio de software.
 
-| Importar clave del repositorio | Añadir repositorio a **“/etc/apt/sources.list”** | Instalación | 
-| :-------------: | :-------------: |  :-------------: |
-| ![Imagen]() | ![Imagen]() | ![Imagen]() |
+| Importar clave del repositorio | Añadir repositorio a **“/etc/apt/sources.list”** | 
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-03.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-05.PNG) |
 
 #### Anotaciones 
 - Obtener repositorio: wget http://nginx.org/key/ngonx_signing.key
@@ -37,7 +35,7 @@ La configuración de NginX se realiza en el archivo **“/etc/nginx/conf.d/defau
 
 | Configuración |
 | :-------------: |
-| ![Imagen]() |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-05.PNG) |
 
 Una vez completada la configuración, se comprobará que las peticiones al servidor están sindiendo balanceadas según el criterio indicado. Mediante el navegador `curl` se accede al balanceador mediante su dirección IP.
 
@@ -46,7 +44,8 @@ Una vez completada la configuración, se comprobará que las peticiones al servi
 | ![Imagen]() | ![Imagen]() |
 
 #### Anotaciones 
-- El uso de curl en mi caso es: curl http://192.168.78.134
+- El uso de curl en mi caso es: curl http://192.168.78.130
+- Al pasarlo al portatil dejó de funcionar y no se cuál es el problema
 
 ## Instalar y configurar HAProxy
 Para instalar HAProxy se usa `apt-get`. 
