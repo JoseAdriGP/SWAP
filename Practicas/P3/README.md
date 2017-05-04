@@ -37,7 +37,13 @@ La configuración de NginX se realiza en el archivo **“/etc/nginx/conf.d/defau
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-05.PNG) |
 
-Una vez completada la configuración, se comprobará que las peticiones al servidor están sindiendo balanceadas según el criterio indicado. Mediante el navegador `curl` se accede al balanceador mediante su dirección IP.
+Una vez completada la configuración, deberemos ir al archivo `/etc/nginx/nginx.conf`, donde comentaremos la linea `include /etc/nginx/sites-enabled`.
+
+| Comentar linea |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-06.PNG) |
+
+Ahora se comprobará que las peticiones al servidor están sindiendo balanceadas según el criterio indicado. Mediante el navegador `curl` se accede al balanceador mediante su dirección IP.
 
 | Comprobar IP | Uso de la orden `curl` para comprobar funcionamiento| 
 | :-------------: | :-------------: |
