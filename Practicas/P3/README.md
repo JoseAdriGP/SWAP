@@ -11,9 +11,9 @@ De esta forma conseguiremos una infraestructura redundante y de alta disponibili
 ## Primeros pasos
 Vamos a comprobar que tenemos nuestros dos servidores funcionando y conectados a la misma red, asi que hay que comprobar que Apache está arrancado, obtener la dirección IP de ambos servidores, y ver que sean visibles entre sí.
 
-| Server 1 | Server 2 | 
-| :-------------: | :-------------: |
-| ![Imagen]() | ![Imagen]() |
+| Server 1 | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/Images/3-01.PNG) |
 
 #### Anotaciones 
 - Comprobar el funcionamiento de apache: /etc/init.d/apache2 status
