@@ -64,7 +64,7 @@ Si se realiza correctamente la creación y copiado de las claves, la ejecución 
 
 Para automatizar la copia con `rsync` mediante `cron`, se puede crear un script que realice la operación de copiado que acabamos de ver con `rsync`, y una vez creado el script, se le darán permisos de ejecución para solo nuestro usuario: `chmod 744 scriptUpdate.sh`. 
 
-Para finalizar faltaría es añadir una nueva tarea al **“crontab”** (fichero de configuración de `cron` en **“/etc/crontab”**), para que cada hora se realice la copia de seguridad en nuestra máquina replicante, así que en este caso deberemos añadir: `0 *      * * *  root    /root/scriptUpdate.sh`.
+Para finalizar faltaría es añadir una nueva tarea al **“crontab”** (fichero de configuración de `cron` en **“/etc/crontab”**), para que cada hora se realice la copia de seguridad en nuestra máquina replicante, así que en este caso deberemos añadir: `0 *      * * *  root    /root/actualizador.sh`.
 
 Aquí se indica que en el minuto **“0”** de cada hora, de cada día del mes, de cada mes, de cada día de la semana, el usuario **“root”** ejecute el script **“/root/scriptUpdate.sh”**, que es el script que acabamos de crear para que realice la copia del contenido actualizado del directorio **“/var/inventado/”** de la máquina principal a la máquina replicante.
 
