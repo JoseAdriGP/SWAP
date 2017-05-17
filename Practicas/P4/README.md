@@ -27,7 +27,7 @@ Para hacer esto se copia el certificado mediante el mismo método seguido en las
 Esto debería bastar en la configuración.
 
 ## Configuración del cortafuegos
-
+A continuación dejo el script utilizado `/root/rules_iptables.sh`:
 ```shell
 #!/bin/sh
 
@@ -52,5 +52,6 @@ iptables -A OUTPUT -o enp0s8 -p tcp -m multiport --sports 22,80,443 --state ESTA
 
 iptables -L -n -v
 ```
+Hecho esto, se añade en `/etc/crontab` la linea *@reboot     root        sh /home/gmm/reglas_iptables.sh*. Con esto se consigue que el script se ejecute al arrancar la máquina.
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P3/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/README.md)
