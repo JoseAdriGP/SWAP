@@ -27,6 +27,7 @@ Para hacer esto se copia el certificado mediante el mismo método seguido en las
 Esto debería bastar en la configuración.
 
 ## Configuración del cortafuegos
+La configuración siguiente se hace en la máquina que tenga el papel de balanceador de carga.
 A continuación dejo el script utilizado `/root/rules_iptables.sh`:
 ```shell
 #!/bin/sh
