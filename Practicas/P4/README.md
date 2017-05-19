@@ -48,8 +48,8 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
 # Abrir los puertos 22, 80 y 433 para permitir el acceso por SSH
-iptables -A INPUT -i enp0s8 -p tcp -m multiport --dports 22,80,443 -m --state NEW,ESTABLISHED -j ACCEPT
-iptables -A OUTPUT -o enp0s8 -p tcp -m multiport --sports 22,80,443 --state ESTABLISHED -j ACCEPT
+iptables -A INPUT -i eth0 -p tcp -m multiport --dports 22,80,443 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -o eth0 -p tcp -m multiport --sports 22,80,443 state --state ESTABLISHED -j ACCEPT
 
 iptables -L -n -v
 ```
