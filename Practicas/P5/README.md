@@ -53,6 +53,29 @@ La creacíon de la base de datos se ralizará mediante comandos de SQL. Para aqu
 | :-------------: | :-------------: | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/07.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/08.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/09.PNG) |
 
+## Replicar una BD MySQL con mysqldump
+Para realizar este ejercicio habrá bloquear la base de datos principal para que no se pueda cambiar nada.
+
+| BLoquear BD | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/10.PNG) |
+
+La copia de la BD se realizará mediante la herramienta `mysqldump`,  introduciendo el comando `mysqldump peliculas -u root -p > /root/peliculas.sql`. También se pedirá la contraseña de **root**.
+
+| Realizar copia de la BD | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/11.PNG) |
+
+Para desbloquear la base de datos principal y volver a trabajar con ella normalmente se debe introducir `UNLOCK TABLES`.
+
+| Desbloquear BD | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/12.PNG) |
+
+
+
+
+## Replicación de BD mediante una configuración maestro-esclavo
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
