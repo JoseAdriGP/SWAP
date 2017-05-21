@@ -43,6 +43,7 @@ Hecho esto, se debe pasar a parar e iniciar MySQL. Ahora se buscará su PID con 
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/05.PNG) |
 
 Como ahora el usuario “root” tiene contraseña, se accederá con el comando `mysql –u root –p` introduciendo la contraseña.
+
 | Evitar porblemas para acceder como root | 
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/06.PNG) |
