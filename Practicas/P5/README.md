@@ -28,5 +28,14 @@ Ahora se podrá acceder como usuario **root** sin ser necesario introducir contr
 | :-------------: | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/03.PNG) |![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/04.PNG) |
 
+Como podemos ver en la imagenes anteriores, las ordenes usadas dentro de `mysql –u root` son:
+- use mysqule;
+- update user set password=PASSWORD("laNuevaClaveSegura") where User='root';
+- flush privileges;
+- quit
+
+La clave dada en este ejemplo es `laNuevaClaveSegura`, pero por supuesto esto está sujeto a modificación. 
+
+
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
