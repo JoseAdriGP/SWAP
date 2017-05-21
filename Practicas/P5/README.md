@@ -22,5 +22,11 @@ Para poder continuar se necisita trabajar con otro terminal, pero al no ser esto
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/02.PNG) |
 
+Ahora se podrá acceder como usuario **root** sin ser necesario introducir contraseña mediante la orden `mysql –u root`. Se seleccionará la base de datos que contiene los datos de los usuarios y ya se podrá cambiar la contraseña del usuario **root**. Solo faltaría actualizar los cambios realizados (`flush privileges`) y salir.
+
+| Entradas con al orden `mysql –u root` | Uso de `flush privileges` y salida |
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/03.PNG) |![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/04.PNG) |
+
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
