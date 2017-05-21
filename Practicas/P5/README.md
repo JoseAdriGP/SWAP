@@ -29,12 +29,29 @@ Ahora se podrá acceder como usuario **root** sin ser necesario introducir contr
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/03.PNG) |![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/04.PNG) |
 
 Como podemos ver en la imagenes anteriores, las ordenes usadas dentro de `mysql –u root` son:
-- use mysqule;
+- use mysql;
 - update user set password=PASSWORD("laNuevaClaveSegura") where User='root';
 - flush privileges;
 - quit
 
-La clave dada en este ejemplo es `laNuevaClaveSegura`, pero por supuesto esto está sujeto a modificación. 
+La clave dada en este ejemplo es `laNuevaClaveSegura`, pero por supuesto esto está sujeto a modificación.
+
+Hecho esto, se debe pasar a parar e iniciar MySQL. Ahora se buscará su PID con `ps aux | grep mysql`, matándolo con `kill -9 PID`.Con esto se evitan problemas para acceder con la nueva contraseña actualizada de **root**.
+
+| Evitar porblemas para acceder como root | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/05.PNG) |
+
+Como ahora el usuario “root” tiene contraseña, se accederá con el comando `mysql –u root –p` introduciendo la contraseña.
+| Evitar porblemas para acceder como root | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/06.PNG) |
+
+La creacíon de la base de datos se ralizará mediante comandos de SQL. Para aquellos que no sepán sobre SQL, consultad un tutorial o recuperad los apuntes de FBD.
+
+| Creación de la BD | Insercion de datos | Uso de describe |
+| :-------------: | :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/07.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/08.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/09.PNG) |
 
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
