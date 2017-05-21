@@ -20,7 +20,7 @@ Para poder continuar se necisita trabajar con otro terminal, pero al no ser esto
 
 | Reiniciando MySQL en caso de no poder iniciar un segundo terminal| 
 | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/01.PNG) |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/02.PNG) |
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
