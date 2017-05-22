@@ -107,42 +107,62 @@ Para saber con certeza que los datos están siendo constantemente actualizados, 
 | :-------------: | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19.PNG) |
 
+Habrá crear el usuario que va a usar el servidor esclavo para conectarse al servidor maestro y actualizarse, por lo que en el **servidor maestro** se creará el usuario con permisos de replicación (replication slave) `replislave` que se podrá conectar desde la dirección  IP  192.168.75.129  (la  dirección  IP  del  servidor  esclavo),  identificándose  con  la contraseña `pass`. Se hará efgectivo recargando la tabla de permisos con `flush privileges`.
 
+| Orden en la base de datos | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/20.PNG) |
 
-Ahora tenemos que crear el usuario que va a usar el servidor esclavo para conectarse al servidor maestro y actualizarse, para esto en el servidor maestro, vamos a crear el usuario con permisos de replicación (replication slave) `replislave` que se podrá conectar desde la dirección  IP  192.168.78.133  (la  dirección  IP  del  servidor  esclavo),  identificándose  con  la contraseña `pass`. Lo hacemos efectivo recargando la tabla de permisos con `flush privileges`.
+Se necesitará una copia actual de la base de datos en el servidor maestro para aplicar en el servidor esclavo. El proceso se hará como se vio en la copia manual: 
+#### En el servidor maestro
+- Bloqueo de las tablas de la base de datos: `flush tables with read lock;` 
+- Salir de MySQL: quit
+- Crear la copia: `mysqldump peliculas –u root –p > /root/contactos.sql`
+- Entrar en MySQL para desbloquear las tablas: `unlock tables;`
+- Salimos para transferir la copia al servidor esclavo: `scp peliculas.sql pedro@192.168.75.129:/home/pedro`
+#### En el servidor esclavo
+- Accedemos a MySQL para crear la base de datos a importar: `create database peliculas;`
+- Salir de MySQL: `quit`
+- Aplicar la copia sobre dicha base de datos: `mysql –u root –p peliculas < peliculas.sql;`
 
-![pra05_img15](imagenes/pra05_img15.png)
+A continuación se editará el archivo de configuración de MySQL en el servidor esclavo. Se especificará un identificador único para este servidor, y puesto que se ha identificado el servidor maestro como `1`, el servidor esclavo recibirá como valor `2`.
 
-Necesitaremos una copia actual de la base de datos en el servidor maestro para aplicar en el servidor esclavo, así que la hacemos como vimos en la copia manual: primero bloqueamos las tablas de la base de datos (`flush tables with read lock;`), salimos de MySQL, creamos la copia (`mysqldump contactos –u root –p > /root/contactos.sql`), volvemos a entrar en MySQL para desbloquear las tablas (`unlock tables;`), salimos para transferir la copia al servidor esclavo (`scp contactos.sql root@192.168.78.133:~`); ahora en el servidor esclavo, accedemos a MySQL para crear la base de datos que vamos a importar (`create database contactos`), y aplicamos la copia sobre dicha base de datos (`mysql –u root –p contactos < contactos.sql`).
+| Modificación del fichero `/etc/mysql/my.cnf` en el servidor esclavo | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/21.PNG) |
 
-A continuación editamos el archivo de configuración de MySQL en el servidor esclavo, básicamente lo que tenemos que hacer es especificar un identificador único para este servidor, como el servidor maestro tiene el identificador `1`, a este servidor esclavo le vamos a dar `server-id=2`.
+Habrá que comprobar si la configuración hecha hasta el momento funciona, por que lo que se reniciará primero MySQL en el servidor esclavo, haciendo posteriormente una conexión remota al maestro accediendo con el usuario creado anteriormente mediante la orden `mysql -h 192.168.75.131 -u repislave -p'pass'`
+Parámetros:
+- Nombre de usuario: `replislave`
+- Contraseña `pass`
 
-![pra05_img16](imagenes/pra05_img16.png)
+| Conexión desde el servidor esclavo | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/22.PNG) |
 
-Comprobamos si la configuración hecha hasta el momento funciona, reiniciamos primero MySQL en el servidor esclavo, y desde él intentamos conectarnos remotamente al servidor maestro accediendo con el usuario que creamos antes (nombre de usuario `replislave` y contraseña `pass`); para ello usaremos la opción `-h` de MySQL al iniciar la conexión como se ve en la siguiente imagen:
+Para poder empezar con la sincronización, se volverá al maestro para bloquear de nuevo las tablas (`flush tables with read lock;`). A partir de aquí habrá que buscar la información sobre el archivo binario que almacena las transacciones al que se hace referencia en la configuración del servidor maestro (`show master status;`). Interesa conocer el nombre de dicho archivo y la posición para que, a partir de ahí, sea la información que utiliza el maestro para actualizarse.
 
-![pra05_img17](imagenes/pra05_img17.png)
+| Uso de `show master status;` | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/23.PNG) |
 
-Para poder empezar con la sincronización, volvemos al servidor maestro, bloqueamos de nuevo las tablas (`flush tables with read lock;`) y buscamos la información sobre el archivo binario que almacena las transacciones al que hacíamos referencia en la configuración del servidor maestro (`show master status;`), nos interesa conocer el nombre de dicho archivo y la posición, para que a partir de ahí sea la información que utiliza nuestro servidor maestro para actualizarse.
-
-![pra05_img18](imagenes/pra05_img18.png)
-
-Volvemos al servidor esclavo, y le introducimos la información necesaria para que se pueda conectar al maestro con la consulta:
+Se debe volvemos ahora al servidor esclavo donde se introducirá la información necesaria para que se pueda conectar al maestro con la consulta:
 
 ```
 change master to 
-master_host=’192.168.78.132’, 
+master_host=’192.168.75.131’, 
 master_user=’replislave’, 
 master_password=’pass’, 
-master_log_file=’mysql-bin.000017’, 
-master_log_pos=107;
+master_log_file=’mysql-bin.000001’, 
+master_log_pos=335;
 ```
 
-Siendo estos dos últimos valores los que hemos obtenido del estado del servidor maestro. Desbloqueamos las tablas en el servidor maestro (`unlock tables;`) e iniciamos el servidor esclavo para que funcione como esclavo (`start slave;`).
+Los dos últimos valores son los obtenido del estado del servidor maestro. Ahora habrá que desbloquear las tablas en el servidor maestro (`unlock tables;`) e iniciar el servidor esclavo para que funcione como esclavo (`start slave;`).
 
-![pra05_img19](imagenes/pra05_img19.png)
+| Cambios en el maestro | Desbloquear las tablas en el maestro |
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/24.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/25.PNG) |
 
-![pra05_img20](imagenes/pra05_img20.png)
 
 Comprobamos ahora que el **“esclavo”** está funcionando, para ello deberemos mostrar su estado, como la salida generada no puede ser mostrada en una sola pantalla, vamos a redirigir su salida a un archivo para visualizarla más fácilmente.
 
