@@ -159,18 +159,22 @@ master_log_pos=335;
 
 Los dos últimos valores son los obtenido del estado del servidor maestro. Ahora habrá que desbloquear las tablas en el servidor maestro (`unlock tables;`) e iniciar el servidor esclavo para que funcione como esclavo (`start slave;`).
 
-| Cambios en el maestro | Desbloquear las tablas en el maestro |
+| Cambios de maestro en el esclavo | Desbloquear las tablas en el maestro |
 | :-------------: | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/24.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/25.PNG) |
 
+Ahora se comprobará que el **“esclavo”** está funcionando, para lo que se tendrá que mostrar su estado. Como la salida generada no puede ser mostrada en una sola pantalla, se redirigira su salida a un archivo para visualizarla más fácilmente.
 
-Comprobamos ahora que el **“esclavo”** está funcionando, para ello deberemos mostrar su estado, como la salida generada no puede ser mostrada en una sola pantalla, vamos a redirigir su salida a un archivo para visualizarla más fácilmente.
+| Orden para extraer la información del estado |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/26.PNG) |
 
-![pra05_img21](imagenes/pra05_img21.png)
+Siendo esta la salida obtenida con todos los valores actuales  de configuración del servidor esclavo, entre otros se ve la dirección del servidor maestro (**192.168.75.131**) o el usuario que usa para acceder al servidor maestro (**replislave**):
 
-Siendo esta la salida obtenida con todos los valores actuales  de configuración del servidor esclavo, entre otros vemos la dirección del servidor maestro (**192.168.78.132**) o el usuario que usa para acceder al servidor maestro (**replislave**):
+| nano 1 | nano 2 | nano 3 |
+| :-------------: | :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/27A.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/27B.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/27C.PNG) |
 
-![pra05_img22](imagenes/pra05_img22.png)
 
 Ya con toda la configuración realizada, solo nos queda probar que la sincronización automática funciona correctamente, para esto, en el servidor maestro realizamos una consulta de selección de todos los datos en la tabla existente (`select * from datos`); en el maestro, mediante una consulta de inserción introducimos un nuevo valor en la base de datos; volvemos al esclavo y realizamos la misma consulta de selección, si se muestra el nuevo de registro que hemos introducido desde el servidor maestro, la sincronización automática estará funcionando, por lo que podemos dar por finalizada la configuración.
 
