@@ -85,6 +85,14 @@ A continuacion vemos la comprobación de la recepción de los archivos:
 | :-------------: | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/14.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/15.PNG) |
 
+Con esta parte realizada, se deberá crear una bd con el nombre peliculas en mysql en la máquina que acaba de recibir el archivo, ya que este posee la información, pero no las ordenes para crear una nueva bd. Como el proceso es el mismo que en la anterior máquina, simplemente se debe repetir los pasos descritos en la creación omitiendo aquellos en los insertamos información en la bd.
+
+Una vez creada la BD, se pasa a introducir los datos del archivo mediante la orden `mysql -u root -p peliculas < /home/pedro/peliculas.sql`.
+
+| Inserción de datos en la BD | Conprobación de los datos de la BD |
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/16.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/17.PNG) |
+
 ## Replicación de BD mediante una configuración maestro-esclavo
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
