@@ -103,17 +103,9 @@ Para empezar hay que editar el archivo de configuración `/etc/mysql/my.cnf` en 
 
 Para saber con certeza que los datos están siendo constantemente actualizados, se debe indicar en `sync_binlog=1` que el registro binario se sincronice con el disco tras cada escritura que se produzca en él. El resto de parámetros que se muestran son para aspectos de los archivos de registro que también se pueden incluir. En este mismo archivo de configuración se debe comentar la línea `bind-address=127.0.0.1` para que el sistema escuche el resto de equipos de la red que no sean el propio host. Para que la configuración se haga efectiva, se debe reiniciar **“mysql”**.
 
-| Edición del archivo `/etc/mysql/my.cnf` | 
-| :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) |
-
-![pra05_img13](imagenes/pra05_img13.png)
-
-
-
-![pra05_img14](imagenes/pra05_img14.png)
-
-
+| Comentar linea `bind-address=127.0.0.1` | Editar parámetros | 
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19.PNG) |
 
 
 
