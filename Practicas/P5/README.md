@@ -73,8 +73,17 @@ Para desbloquear la base de datos principal y volver a trabajar con ella normalm
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/12.PNG) |
 
+A partir de aquí queda pasar el archivo `.sql` que se ha generado con anterioridad, en el caso de este ejemplo `peliculas.sql`. Para hacer esto, se puede solicitar desde la máquina que recibirá la copia o enviarla desde aquella en la que se creo la bd.
 
+| Enviar archivos de m1 a m2 | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/13.PNG) |
 
+A continuacion vemos la comprobación de la recepción de los archivos:
+
+| Comprobación de que el archivo se encuentra en el directorio | Uso de cat para comprobar el contenido del documento |
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/14.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/15.PNG) |
 
 ## Replicación de BD mediante una configuración maestro-esclavo
 
