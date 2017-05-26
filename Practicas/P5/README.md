@@ -125,7 +125,7 @@ Se necesitará una copia actual de la base de datos en el servidor maestro para 
 - Salir de MySQL: `quit`
 - Aplicar la copia sobre dicha base de datos: `mysql –u root –p peliculas < peliculas.sql;`
 
-A continuación se editará el archivo de configuración de MySQL en el servidor esclavo. Se especificará un identificador único para este servidor, y puesto que se ha identificado el servidor maestro como `1`, el servidor esclavo recibirá como valor `2`.
+A continuación se editará el archivo de configuración de MySQL en el servidor esclavo de la misma forma que el maestro. Se especificará un identificador único para este servidor, y puesto que se ha identificado el servidor maestro como `1`, el servidor esclavo recibirá como valor `2`.
 
 | Modificación del fichero `/etc/mysql/my.cnf` en el servidor esclavo | 
 | :-------------: |
