@@ -103,9 +103,9 @@ Para empezar hay que editar el archivo de configuración `/etc/mysql/my.cnf` en 
 
 Para saber con certeza que los datos están siendo constantemente actualizados, se debe indicar en `sync_binlog=1` que el registro binario se sincronice con el disco tras cada escritura que se produzca en él. El resto de parámetros que se muestran son para aspectos de los archivos de registro que también se pueden incluir. En este mismo archivo de configuración se debe comentar la línea `bind-address=127.0.0.1` para que el sistema escuche el resto de equipos de la red que no sean el propio host. Para que la configuración se haga efectiva, se debe reiniciar **“mysql”**.
 
-| Comentar linea `bind-address=127.0.0.1` | Editar parámetros | 
-| :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19.PNG) |
+| Comentar linea `bind-address=127.0.0.1` | Editar parámetros 1 |  Editar parámetros 2 |
+| :-------------: | :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19.PNG) || ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19B.PNG) |
 
 Habrá crear el usuario que va a usar el servidor esclavo para conectarse al servidor maestro y actualizarse, por lo que en el **servidor maestro** se creará el usuario con permisos de replicación (replication slave) `replislave` que se podrá conectar desde la dirección  IP  192.168.75.129  (la  dirección  IP  del  servidor  esclavo),  identificándose  con  la contraseña `pass`. Se hará efgectivo recargando la tabla de permisos con `flush privileges`.
 
@@ -153,8 +153,9 @@ change master to
 master_host=’192.168.75.131’, 
 master_user=’replislave’, 
 master_password=’pass’, 
-master_log_file=’mysql-bin.000001’, 
-master_log_pos=335;
+master_log_file=’bin.000001’, 
+master_log_pos=107,
+master_port3306;
 ```
 
 Los dos últimos valores son los obtenido del estado del servidor maestro. Ahora habrá que desbloquear las tablas en el servidor maestro (`unlock tables;`) e iniciar el servidor esclavo para que funcione como esclavo (`start slave;`).
