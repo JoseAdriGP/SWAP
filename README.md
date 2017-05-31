@@ -16,3 +16,5 @@
 * [Tema 4: Balanceo de carga](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T4.md)
 
 ### [Probemas encontrados](Practicas/README.md)
+
+### [Trabajo en grupo: Granja de servidores](https://github.com/JoseAdriGP/SWAP/blob/master/Trabajo%20en%20grupo/README.md)
