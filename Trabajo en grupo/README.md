@@ -5,7 +5,7 @@
 * [Pablo Martínez Ruano](https://github.com/pabe94): Servidor 2
 * [lvaro Muñoz García](https://github.com/alvaromgs): Balanceador
 * [José Adrián Garrido Puertas](https://github.com/JoseAdriGP): Servidor de base de datos
-* Félix Ramírez García: Aplicación
+* [Félix Ramírez García](https://github.com/felixramirezgarcia): Aplicación
 
 ### Tareas necesarias
 * Abrir puertos 80, 443 y 3306
