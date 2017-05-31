@@ -1,11 +1,10 @@
-
 # Trabajo en grupo: Granja de servidores
 
 ### Integrantes y cometidos
 * [Álvaro Arévalo Toro](https://github.com/AlvaroAT95): Servidor 1
-* Álvaro Muñoz García: Balanceador
-* José Adrián Garrido Puertas: Servidor de base de datos
-* Pablo Martínez Ruano: Servidor 1
+* [Pablo Martínez Ruano](https://github.com/pabe94): Servidor 1
+* [lvaro Muñoz García](https://github.com/alvaromgs): Balanceador
+* [José Adrián Garrido Puertas](https://github.com/JoseAdriGP): Servidor de base de datos
 * Félix Ramírez García: Aplicación
 
 ### Tareas necesarias
