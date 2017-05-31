@@ -2,7 +2,7 @@
 # Trabajo en grupo: Granja de servidores
 
 ### Integrantes y cometidos
-* Álvaro Arévalo Toro: Servidor 1
+* [Álvaro Arévalo Toro](https://github.com/AlvaroAT95): Servidor 1
 * Álvaro Muñoz García: Balanceador
 * José Adrián Garrido Puertas: Servidor de base de datos
 * Pablo Martínez Ruano: Servidor 1
