@@ -178,5 +178,5 @@ Siendo esta la salida obtenida con todos los valores actuales  de configuración
 
 Ya con toda la configuración realizada, solo faltará probar que la sincronización automática funciona correctamente. En el servidor maestro se realiza una consulta de selección de todos los datos en la tabla existente (`select * from datos`). Ahora mediante una consulta de inserción se introduce un nuevo valor en la base de datos. Hehco esto se retornará al esclavo y se consulta con una selección. Si se muestra el nuevo de registro introducido desde el servidor maestro la sincronización automática estará funcionando.
 
-[Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
+[Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P4/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/README.md)
 
