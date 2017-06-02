@@ -7,6 +7,7 @@
 * [Práctica 3: Balanceo de carga](Practicas/P3/README.md)
 * [Práctica 4: Comprobar el rendimiento de servidores web](Practicas/P4/README.md)
 * [Práctica 5: Replicación de bases de datos de MySQL](Practicas/P5/README.md)
+* [Práctica 6: Discos en RAID](Practicas/P6/README.md)
 
 ### Ejercicios
 
