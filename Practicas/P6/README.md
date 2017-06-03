@@ -12,12 +12,19 @@ Para empezar se debe seleccionar la máquina a utilizar para para crear en ella 
 
 | Botón `Edit virtual machine settings` | Seleccionar `Hard Disk` | Selección de `SCSI` | Nuevo disco añadido | 
 | :-------------: | :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-02.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-02.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-03.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-04.PNG) |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-01.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-02.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-03.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-04.PNG) |
 
 Como se puede apreciar, por defecto crea un disco duro con el mismo espacio y aunque se puede cambiar, por defecto marcará el tipo de disco `SCSI`.
 
 ## Configuración del RAID por sofware
 
+PAra hacer la configuración habrá que instalar *mdadm* mediante e comando `sudo apt-get install mdadm`, y mediante `fdisk -l` podremos saber cómo identificar los discos.
+
+| Información mostrada por `fdisk` | 
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05.PNG) |
+
+Como se muestra en la imagen, la orden debe ejecutarse con `sudo`. En caso contrario **no mostrará** la información requerida.
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
