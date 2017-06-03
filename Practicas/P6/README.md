@@ -12,7 +12,7 @@ Para empezar se debe seleccionar la máquina a utilizar para para crear en ella 
 
 | Botón `Edit virtual machine settings` | Seleccionar `Hard Disk` | Selección de `SCSI` | Nuevo disco añadido | 
 | :-------------: | :-------------: | :-------------: | :-------------: |
-| [Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-01.PNG ) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-02.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-03.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-04.PNG) |
+| [Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-01.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-02.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-03.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-04.PNG) |
 
 Como se puede apreciar, por defecto crea un disco duro con el mismo espacio y aunque se puede cambiar, por defecto marcará el tipo de disco `SCSI`.
 
