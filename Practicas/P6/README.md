@@ -42,5 +42,23 @@ Para comprobar el estado de la configuración se utilizará el comando siguiente
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-07.PNG) |
 
+El último paso será configurar el servidor para que al arrancar monte el dispositivo RAID configurado en la carpeta indicada, pero antes de nada, mediante la orden `blkid` se comprobará la UUID del RAID.
+
+| `blkid` |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-08.PNG) |
+
+Habra que situarse en al fichero `/etc/fstab` para añadir la línea **UUID=d0b669c2-4c96-4407-b94b-e8409dee14fc /hopme/pedro/datos ext2 default 0 0**.
+
+| Añadir la línea en `/etc/fstab` |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-09.PNG) |
+
+Para comprobar que todo el proceso se ha realizado de forma correcta, se podrá reiniciar el sistema y comprobar si está montado el RAID en la carpeta `/hopme/pedro/datos` introduciendo el comando `mount`.
+
+| Comprobación de la configuración mediante `mount` |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-09.PNG) |
+
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
