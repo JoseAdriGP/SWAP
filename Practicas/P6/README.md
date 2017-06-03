@@ -58,7 +58,11 @@ Para comprobar que todo el proceso se ha realizado de forma correcta, se podrá 
 
 | Comprobación de la configuración mediante `mount` |
 | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-09.PNG) |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-10.PNG) |
+
+## Simulación de error
+
+
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
