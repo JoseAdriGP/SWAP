@@ -60,7 +60,15 @@ Para comprobar que todo el proceso se ha realizado de forma correcta, se podrá 
 | :-------------: |
 | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-10.PNG) |
 
-## Simulación de error
+## Simulación de error y cambios de disco en caliente
+
+Se podrá simular un fallo en uno de los discos mediante `sudo mdadm --manage --set-faulty /dev/md0 /dev/sdb`, permitiendose retirar **en caliente** el disco que está marcado como que ha fallado `mdadm --manage --remove /dev/md0 /dev/sdb`.
+Y por último se puede añadir también “en caliente” un nuevo disco que vendría a reemplazar al disco que hemos retirado `mdadm --manage --add /dev/md0 /dev/sdb`. En el caso presentado se ha hecho con el mismo disco.
+
+| Hacer que falle un disco, quitarlo y volver a colocarlo |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-11.PNG) |
+
 
 
 
