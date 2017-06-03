@@ -20,11 +20,27 @@ Como se puede apreciar, por defecto crea un disco duro con el mismo espacio y au
 
 PAra hacer la configuración habrá que instalar *mdadm* mediante e comando `sudo apt-get install mdadm`, y mediante `fdisk -l` podremos saber cómo identificar los discos.
 
-| Información mostrada por `fdisk` | 
-| :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05.PNG) |
+| Información mostrada por `fdisk` 1 | Información mostrada por `fdisk` 2 | 
+| :-------------: | :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05A.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05b.PNG) |
 
-Como se muestra en la imagen, la orden debe ejecutarse con `sudo`. En caso contrario **no mostrará** la información requerida.
+Como se muestra en la imagen, la orden debe ejecutarse con `sudo`. En caso contrario **no mostrará** la información requerida. Por otro lado, el disco principal se sitúa y denomina como `/dev/sda`, frente a los secundarios añadidos en `/dev/sdb` y `/dev/sdc`.
+
+En mi caso aparece esa información. Podemos apreciar que indica los 2 discos añadidos de tamaño 20GB aprox. Al disco principal lo sitúa y denomina /dev/sda y los secundarios añadidos en /dev/sdb y /dev/sdc.
+
+Con la información obtenida se puede confirar ya el RAID 1 utilizando los dos discos añadidos para realizar el montaje. Con el comando `mdadm -C /dev/md0 --level=raid1 --raid-devices=2 /dev/sdb /dev/sdc` se indica que se haga en /dev/md0, nivel RAID 1 y número de dispositivos 2.
+
+| Configuración `mdadm` |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-06.PNG) |
+
+Si no ha ocurrido ningún problema se podra continuar dando formato al RAID mediante `mkfs /dev/md0` y montando el raid en un directorio exsistente mediante `mount /dev/md0 /datos` (en el caso presentado el directorio será datos). Es importante recordar que estos pasos deben realizarse con sudo o desde el usuario root.
+
+Para comprobar el estado de la configuración se utilizará el comando siguiente `mdadm --detail /dev/md0`.
+
+| Estado de la configuración mediante `mdadm --detail /dev/md0` |
+| :-------------: |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-07.PNG) |
 
 [Indice](https://github.com/JoseAdriGP/SWAP-Practicas/blob/master/README.md) [Anterior](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/README.md) [Siguiente](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T1.md)
 
