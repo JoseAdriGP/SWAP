@@ -22,7 +22,7 @@ PAra hacer la configuración habrá que instalar *mdadm* mediante e comando `sud
 
 | Información mostrada por `fdisk` 1 | Información mostrada por `fdisk` 2 | 
 | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05A.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05b.PNG) |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05A.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P6/Images/P6-05B.PNG) |
 
 Como se muestra en la imagen, la orden debe ejecutarse con `sudo`. En caso contrario **no mostrará** la información requerida. Por otro lado, el disco principal se sitúa y denomina como `/dev/sda`, frente a los secundarios añadidos en `/dev/sdb` y `/dev/sdc`.
 
