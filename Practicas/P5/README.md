@@ -105,7 +105,7 @@ Para saber con certeza que los datos están siendo constantemente actualizados, 
 
 | Comentar linea `bind-address=127.0.0.1` | Editar parámetros 1 |  Editar parámetros 2 |
 | :-------------: | :-------------: | :-------------: |
-| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19.PNG) || ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19B.PNG) |
+| ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/18.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19.PNG) | ![Imagen](https://github.com/JoseAdriGP/SWAP/blob/master/Practicas/P5/Images/19B.PNG) |
 
 Habrá crear el usuario que va a usar el servidor esclavo para conectarse al servidor maestro y actualizarse, por lo que en el **servidor maestro** se creará el usuario con permisos de replicación (replication slave) `replislave` que se podrá conectar desde la dirección  IP  192.168.75.129  (la  dirección  IP  del  servidor  esclavo),  identificándose  con  la contraseña `pass`. Se hará efgectivo recargando la tabla de permisos con `flush privileges`.
 
