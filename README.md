@@ -19,6 +19,6 @@
 * [Tema 6: Asegurar el sistema web](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T6.md)
 * [Tema 7: Almacenamiento de datos](https://github.com/JoseAdriGP/SWAP/blob/master/Ejercicios/T7.md)
 
-### [Probemas encontrados](Practicas/README.md)
+### [Problemas encontrados](Practicas/README.md)
 
 ### [Trabajo en grupo: Granja de servidores](https://github.com/JoseAdriGP/SWAP/blob/master/Trabajo%20en%20grupo/README.md)
